@@ -5,21 +5,21 @@
 class Serve < Formula
   desc "Serve files via HTTP."
   homepage "https://github.com/tschaub/serve"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/tschaub/serve/releases/download/v0.2.0/serve-darwin-amd64.tar.gz"
-      sha256 "a59beb691f699b4b89ec0d2c2b233b8b467494f2faae10d45fa7c5dac4c7aa53"
+    on_intel do
+      url "https://github.com/tschaub/serve/releases/download/v0.3.0/serve-darwin-amd64.tar.gz"
+      sha256 "e84274d593b24f9a18aed7cea072b754b7543ff858658dbe8644bb1b38e3cc0e"
 
       def install
         bin.install "serve"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/tschaub/serve/releases/download/v0.2.0/serve-darwin-arm64.tar.gz"
-      sha256 "e892f5bdaeafa9df727211abc01076927d58d03762686b85937920307bd0ebd5"
+    on_arm do
+      url "https://github.com/tschaub/serve/releases/download/v0.3.0/serve-darwin-arm64.tar.gz"
+      sha256 "f98bcffac8a1187f95b85c588ea1207aa970e757400cb4ecffa7cb9e6833c753"
 
       def install
         bin.install "serve"
@@ -28,20 +28,24 @@ class Serve < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/tschaub/serve/releases/download/v0.2.0/serve-linux-amd64.tar.gz"
-      sha256 "4db26a8b6966b2a15bd5a5c9b8da7ab8bcaa017afd69bd433f9b449662de0877"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/tschaub/serve/releases/download/v0.3.0/serve-linux-amd64.tar.gz"
+        sha256 "c26f982932b8fc9a39725ea67409bf4a34170ce2e5a51a56d6e5efa0829a62ac"
 
-      def install
-        bin.install "serve"
+        def install
+          bin.install "serve"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tschaub/serve/releases/download/v0.2.0/serve-linux-arm64.tar.gz"
-      sha256 "d7bb742e80d0c3a7044f408f5d2ad4e34e4a0e984947c113870ed07b42e1f623"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/tschaub/serve/releases/download/v0.3.0/serve-linux-arm64.tar.gz"
+        sha256 "8ce78ac8f7d829a11af3ac8a52e8e2650c9e137568f8d6b1b42794db8c5c0948"
 
-      def install
-        bin.install "serve"
+        def install
+          bin.install "serve"
+        end
       end
     end
   end
