@@ -5,21 +5,21 @@
 class Serve < Formula
   desc "Serve files via HTTP."
   homepage "https://github.com/tschaub/serve"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/tschaub/serve/releases/download/v0.4.0/serve-darwin-amd64.tar.gz"
-      sha256 "aa5fbed1156629b14897508f7a0bc5c74d208957164f0f5ff6164e51e2b26289"
+      url "https://github.com/tschaub/serve/releases/download/v0.5.0/serve-darwin-amd64.tar.gz"
+      sha256 "d14e77482a8a6fe4efce93de600fcf9bee00f315e241b2e7150b99c73ad2f63a"
 
       def install
         bin.install "serve"
       end
     end
     on_arm do
-      url "https://github.com/tschaub/serve/releases/download/v0.4.0/serve-darwin-arm64.tar.gz"
-      sha256 "4589b785f8c25f62d07d91364c3cba3ab5711f6ddd7056fb71b936e933a49135"
+      url "https://github.com/tschaub/serve/releases/download/v0.5.0/serve-darwin-arm64.tar.gz"
+      sha256 "64815a889868d861acca05fa3ed860aaaac83942944a63d19e0e5b7437e2bb07"
 
       def install
         bin.install "serve"
@@ -30,8 +30,8 @@ class Serve < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tschaub/serve/releases/download/v0.4.0/serve-linux-amd64.tar.gz"
-        sha256 "a4ba790999dc35db3bf1195c22f344e2f283dffb1e5e635b4c61e4eb350700a1"
+        url "https://github.com/tschaub/serve/releases/download/v0.5.0/serve-linux-amd64.tar.gz"
+        sha256 "e573f58ba373c672453fa594ee0233f5ab3fbf87c5dc209098bd0d25f891c9e6"
 
         def install
           bin.install "serve"
@@ -40,8 +40,8 @@ class Serve < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tschaub/serve/releases/download/v0.4.0/serve-linux-arm64.tar.gz"
-        sha256 "cc80b835815a5f42a8556fb790a9e667d8efcc003fbf88c1e90a52a7e2749804"
+        url "https://github.com/tschaub/serve/releases/download/v0.5.0/serve-linux-arm64.tar.gz"
+        sha256 "c0a789a85c2e929e8682385bb3773b008885753403c8fc6605d23b239ca1889b"
 
         def install
           bin.install "serve"
