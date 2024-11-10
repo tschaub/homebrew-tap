@@ -5,21 +5,21 @@
 class Stash < Formula
   desc "Caching proxy for offline demos."
   homepage "https://github.com/tschaub/stash"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/tschaub/stash/releases/download/v0.5.0/stash-darwin-amd64.tar.gz"
-      sha256 "a46fae09d4ceaecbbc28de2ab2be76ed3a20233787bb713db300efd669b75c0a"
+      url "https://github.com/tschaub/stash/releases/download/v0.6.0/stash-darwin-amd64.tar.gz"
+      sha256 "6d243c7917c460b9f83dc084a36d570ec07a167e1be142c1cc47338b6692297c"
 
       def install
         bin.install "stash"
       end
     end
     on_arm do
-      url "https://github.com/tschaub/stash/releases/download/v0.5.0/stash-darwin-arm64.tar.gz"
-      sha256 "6520f9b1fbf0f380460816d2d1354b8004d582242fcd169f9c48b7b10faef749"
+      url "https://github.com/tschaub/stash/releases/download/v0.6.0/stash-darwin-arm64.tar.gz"
+      sha256 "89a1f51d17f10da393b2e4b24727b166ffbd169b814c7beccd23f6b47e964454"
 
       def install
         bin.install "stash"
@@ -30,8 +30,8 @@ class Stash < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tschaub/stash/releases/download/v0.5.0/stash-linux-amd64.tar.gz"
-        sha256 "ef90c7f55185704de506ae09f261378a61bcc1a437e094760ce6ee9552efff44"
+        url "https://github.com/tschaub/stash/releases/download/v0.6.0/stash-linux-amd64.tar.gz"
+        sha256 "ce6d20312401b80585df920277c7e394801ece5e39bceab212005ee9e948f1f3"
 
         def install
           bin.install "stash"
@@ -40,8 +40,8 @@ class Stash < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/tschaub/stash/releases/download/v0.5.0/stash-linux-arm64.tar.gz"
-        sha256 "fcb2678cc3ce88ece17b17d5227cc7e2a378b70359ac6cdd599ab0ea79ceb28f"
+        url "https://github.com/tschaub/stash/releases/download/v0.6.0/stash-linux-arm64.tar.gz"
+        sha256 "a31ba6b6272baa8b9aef5b43c37389a8a8678e77f0af8b2b96d0a8001b346aaa"
 
         def install
           bin.install "stash"
